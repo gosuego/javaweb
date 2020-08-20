@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>visibility 프로퍼티</title>
+    <style>
+      span {
+        visibility: hidden;
+        color: blue;
+      }
+    </style>
+    <script>
+      function show(){
+          var objArray = document.getElementsByTagName("span");
+          for(var i=0; i<objArray.length; i++){
+              var obj = objArray[i];
+              var style = window.getComputedStyle(obj);
+              var v = style.getPropertyValue("visibility");
+              if(v == "hidden")
+                  obj.style.visibility = "visible";
+              else
+          }
+      }
+    </script>
+  </head>
+  <body></body>
+</html>

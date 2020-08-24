@@ -25,7 +25,7 @@
       function drop(ev) {
         ev.preventDefault()
         var data = ev.dataTransfer.getData("text")
-        ev.target.appenChild(document.getElementById(data))
+        ev.target.appendChild(document.getElementById(data))
       }
     </script>
   </head>
@@ -33,11 +33,10 @@
     <p>
       원하는 상품을 카트에 담으세요
     </p>
-    <div id="shopping_cart" ondrop="drop(event)" ongragover="allowDrop(event)"></div>
+    <div id="shopping_cart" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
     <br />
     <img id="img" src="image/back.png" draggable="true" ondragstart="drag(event)" />
     <img id="img1" src="image/back1.jpg" draggable="true" ondragstart="drag(event)" />
-
     <img id="img2" src="image/back2.jpg" draggable="true" ondragstart="drag(event)" />
     <img id="img3" src="image/back3.jpg" draggable="true" ondragstart="drag(event)" />
     <img id="img4" src="image/back4.jpg" draggable="true" ondragstart="drag(event)" />

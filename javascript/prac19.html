@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>폼으로 사각형 그리기</title>
+    <style>
+      td {
+        text-align: right;
+        padding-left: 5px;
+        padding-right: 5px;
+      }
+    </style>
+    <script>
+      function draw() {
+        var canvas = document.getElementById("myCanvas")
+        var context = canvas.getContext("2d")
+
+        var x = document.getElementById("x").value
+        var y = document.getElementById("y").value
+        var width = document.getElementById("width").value
+        var height = document.getElementById("height").value
+        var lineWidth = document.getElementById("lineWidth").value
+        var strokeStyle = document.getElementById("strokeStyle").value
+        context.beginPath()
+        context.rect(x, y, width, height)
+        context.lineWidth = lineWidth
+        context.strokeStyle = strokeStyle
+        context.stroke()
+      }
+      function erase() {
+        var canvas = document.getElementById("myCanvas")
+        var context = canvas.getContext("2d")
+        context.clearRect(0, 0, canvas.width, canvas.height)
+      }
+    </script>
+  </head>
+  <body>
+    <h3>폼으로 사각형 그리기</h3>
+  </body>
+</html>

@@ -17,22 +17,22 @@
       context.beginPath()
       context.moveTo(20, 20)
       context.lineTo(150, 50)
-      context.storkeStyle = "blue"
-      context.storke() // 1픽셀의 blue 직선 그리기
+      context.strokeStyle = "blue"
+      context.stroke() // 1픽셀의 blue 직선 그리기
 
       //10 픽셀 yellowgreen 사격형 그리기
       context.beginPath()
       context.rect(20, 80, 120, 50)
       context.lineWidth = 10 // 선 굵기 10픽셀
-      context.storkeStyle = "yellowgreen" //선색
-      context.storke()
+      context.strokeStyle = "yellowgreen" //선색
+      context.stroke()
 
       //20 픽셀의 violet 색 원호 그리기
       context.beginPath()
       context.arc(80, 220, 50, 0, 1.5 * Math.PI, false)
       context.lineWidth = 20 //선 굵기 20 픽셀
-      context.storkeStyle = "violet" //선색
-      context.storke()
+      context.strokeStyle = "violet" //선색
+      context.stroke()
     </script>
   </body>
 </html>

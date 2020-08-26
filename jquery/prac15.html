@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="http://code.jquery.com/jquery-1.10.1.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(".btn2").hide();
+
+            $(".btn1").on("click", function(){
+                $(".box").slideUp(1000,"linear",
+                function(){
+                    $(".btn1").hide();
+                    $(".btn2").show();
+                });
+            });
+
+            $(".btn2").on("click", function(){
+                $(".box").fadeIn(1000, "swing", 
+                function(){
+                    $(".btn2").hide();
+                    $(".btn1").show();
+
+                });
+            });
+            $(".btn3").on("click", function(){
+                $(".box").slideToggle(1000,"linear");
+            });
+            $(".btn4").on("click", function(){
+                $(".box").fadeTo("fast", 0.3);
+            });
+            $(".btn5").on("click", function(){
+                $(".box").fadeTo("fast", 1);
+            });
+        });
+    </script>
+    <style>
+        .content{
+            width: 400px;
+            background-color: #eee;
+        }
+    </style>
+</head>
+<body>
+   <p>
+       <button class="btn1">slideUp</button>
+       <button class="btn2">fadeIn</button>
+   </p>
+   <p>
+    <button class="btn3">slideToggle</button>
+   </p>
+   <p>
+    <button class="btn4">fadeTo(0.3)</button>
+    <button class="btn5">fadeTo(1)</button>
+   </p>
+   <div class="box">
+       <div class="content">
+        로마 제국은 황제 지배 체제 혹은 원수정(principatus)을 사실상 시작한
+        기원전 27년부터 몰락까지의 로마를 일컫는다. 로마 제정 시대의 종식은 395
+       년 동서 로마의 분할, 476년 서로마 제국 멸망, 1453년 동로마 제국 멸망 등 관점에 따라 다르게 볼 수 있다.
+       
+       로마 제국은 지중해 동부의 헬레니즘 문화권과 이집트, 유대, 서부의 옛 카르타고, 히스파니아, 갈리아 등의 기존 영토에 이어 브리타니아와 
+       라인 강 서쪽의 게르마니아, 그리스 북쪽의 다키아까지 판도를 넓혔다. 이러한 패권주의는 로마 제국에 막대
+       한 부를 안겨주었을 뿐만 아니라, 로마 제국의 문화를 고대 지중해 세계에 널리 퍼뜨려, 로마 제국의 건축, 법, 정
+       치, 종교 등이 전해지게 되었다.
+       </div>
+   </div>
+</body>
+</html>
